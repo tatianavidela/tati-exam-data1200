@@ -1,0 +1,133 @@
+body {
+	min-height: 100vh;
+	margin: 0px;
+	display: grid;
+	grid-template-rows: auto 1fr auto;
+	position: relative;
+}
+
+h1{
+    font-family: owners-wide, Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 2.2rem;
+	text-transform: uppercase;
+    margin-top: 0;
+}
+
+/*_Main nav*/
+.main-nav{
+    background-color:#FFF4BC;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 4rem;
+    position: sticky;
+    top: 0;
+}
+.logo {
+	height: 50px;
+	padding: 5px;
+}
+.hamburger-label {
+	font-size: 24px;
+}
+.hamburger-label:hover {
+    cursor: pointer;
+}
+#hamburger-menu {
+	display: none;
+}
+
+#hamburger-menu:checked ~ .menu {
+	display: block;
+}
+
+.menu {
+    display: none;
+    list-style-type: none;
+    position: absolute;
+    top: 60px;
+	right: 0;
+	padding-right: 4em;
+    background-color: #FFF4BC;
+}
+
+.menu li {
+    padding: 1.6rem;
+}
+
+/*_Main header*/
+.main-header {
+    background-color: #FFF4BC;
+    height: fit-content;
+}
+
+/*___Header intro*/
+.header-intro, .header-table{
+    max-width: 1500px;
+    margin: 1rem auto;
+}
+.header-intro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:space-evenly;
+    padding: 2rem;
+    border-bottom: 0.5px solid rgb(143, 143, 143);
+
+}
+.intro-text, .intro-img{
+    max-height:300px ;
+    max-width: 400px;
+}
+
+
+.intro-img img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+
+/*___Hero table section*/
+/* Default layout (narrow screen) */
+
+
+.header-table table {
+    margin: 1rem auto;
+}
+
+.header-table th,
+.header-table td {
+    padding: 8px;
+    text-align: center;
+}
+
+.header-table td {
+    padding-bottom: 3rem;
+}
+
+
+
+ /* Responsive layout for wider screens */
+@media (min-width: 800px) {
+
+    .header-intro {
+        flex-direction: row;
+    }
+    .header-table table {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-auto-rows: auto;
+    }
+
+    .header-table tbody {
+        display: contents;
+    }
+
+    .header-table tr {
+        display: contents;
+    }
+
+
+}
